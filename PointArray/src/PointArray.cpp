@@ -19,6 +19,9 @@ PointArray::PointArray(const PointArray& other) {
 PointArray::PointArray(PointArray&& other) noexcept {
     // todo
     throw std::runtime_error("Not implemented!");
+    arr_ = other.arr_;
+
+    other.arr_ = nullptr;
 }
 
 PointArray::~PointArray() {
